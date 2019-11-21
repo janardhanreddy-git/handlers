@@ -1,0 +1,9 @@
+---
+- hosts: websrevers
+  become: yes
+  tasks:
+  - name: create file
+    file:
+     path: /home/ubuntu/test.txt
+     state: touch
+       
