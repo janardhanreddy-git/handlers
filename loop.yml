@@ -7,7 +7,7 @@
       name: "{{item}}"
       state: present
     loop:
-      - git:
-      - wget:
-      - tree: 
+      - git
+      - wget
+      - tree
           

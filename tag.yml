@@ -1,0 +1,14 @@
+---
+- hosts: 172.31.30.60
+  become: yes
+  gather_facts: false
+  tasks:
+  - name: install git
+    apt:
+     name: git
+     state: present
+    tags: install
+  - name: install wget
+    apt:
+     name: wget
+    tags: uninstall tree
