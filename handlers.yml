@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: 172.31.17.207
   become: yes
   tasks:
   - name: install webserver on redhat
@@ -13,7 +13,7 @@
   - name: copy index.j2 into webserver
     template:
       src: index.j2
-      dest: /var/www/html/index.html
+      dest: /etc/httpd.conf
 
     notify: restart webserver
     when: ansible_os_family =="RedHat" 

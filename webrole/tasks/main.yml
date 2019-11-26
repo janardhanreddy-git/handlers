@@ -1,0 +1,6 @@
+---
+# tasks file for webrole
+- name: install tree
+  apt:
+   name: tree
+   state: present
