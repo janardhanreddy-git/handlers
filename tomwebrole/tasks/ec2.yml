@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: yes
+  tasks: 
+  - ec2:
+     key_name: jana
+     instance_type: t2.micro
+     image: ami-0cfd6ab836f474fe4
+     wait: yes
+     group: launch-wizard
+     count: 2
+     vpc_subnet_id: subnet-64f8eb1d
+     assign_public_ip: yes
